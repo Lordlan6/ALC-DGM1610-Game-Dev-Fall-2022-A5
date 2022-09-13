@@ -13,11 +13,11 @@ public class Balloon : MonoBehaviour
     {
         
     }
-    boid OnMouseDown()
+    void OnMouseDown()
     {
         clickToPop -= 1;
 
-        trasform.localScale += Vector3.one * scaleToIncrease;
+        transform.localScale += Vector3.one * scaleToIncrease;
 
         if(clickToPop == 0)
         {
