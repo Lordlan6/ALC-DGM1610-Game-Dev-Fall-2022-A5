@@ -5,13 +5,13 @@ using UnityEngine;
 public class Balloon : MonoBehaviour
 {
     public int scoreToGive = 100;
-    
     public int clickToPop = 3;
     public float scaleToIncrease = 0.10f;
+    public ScoreManager scoreManager;
     // Start is called before the first frame update
     void Start()
     {
-        
+        scoreManager = GameObject.Find("ScoreManager").GetComponent<ScoreManager>();
     }
     void OnMouseDown()
     {
@@ -21,8 +21,8 @@ public class Balloon : MonoBehaviour
 
         if(clickToPop == 0)
         {
+            scoreManager.IncreaseScoreText(scoreToGive);
             Destroy(gameObject);
         }
     }
-    
 }
