@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Key : Pickups
+public class Gem : Pickups
 {
     private GameManager gm;
     void Start()
@@ -13,7 +13,7 @@ public class Key : Pickups
     {
         if(other.gameObject.CompareTag("Player"))
         {
-            gm.AddKey(amount);
+            gm.AddGem(amount);
             Destroy(gameObject);
         }
     }
