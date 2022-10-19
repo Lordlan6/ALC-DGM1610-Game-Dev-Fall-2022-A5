@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Key : Pickups
+public class Key: Pickups
 {
     private GameManager gm;
     void Start()
@@ -17,5 +17,4 @@ public class Key : Pickups
             Destroy(gameObject);
         }
     }
-
 }
