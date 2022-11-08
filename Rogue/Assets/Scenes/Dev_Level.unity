@@ -137,7 +137,7 @@ GameObject:
   - component: {fileID: 9057934}
   - component: {fileID: 9057935}
   - component: {fileID: 9057936}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Goblin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -822,7 +822,7 @@ GameObject:
   - component: {fileID: 383674708}
   - component: {fileID: 383674709}
   - component: {fileID: 383674710}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Goblin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1032,7 +1032,7 @@ GameObject:
   - component: {fileID: 461754817}
   - component: {fileID: 461754818}
   - component: {fileID: 461754819}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Goblin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1487,7 +1487,7 @@ GameObject:
   - component: {fileID: 577236825}
   - component: {fileID: 577236826}
   - component: {fileID: 577236827}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Goblin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1652,7 +1652,8 @@ GameObject:
   - component: {fileID: 1038936501}
   - component: {fileID: 1038936502}
   - component: {fileID: 1038936503}
-  m_Layer: 0
+  - component: {fileID: 1038936504}
+  m_Layer: 3
   m_Name: Goblin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1803,6 +1804,21 @@ MonoBehaviour:
   shotDelay: 0.5
   startDelay: 1
   projectile: {fileID: 1812428265}
+--- !u!114 &1038936504
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1038936497}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 546d11087f4c34fca9005581f46380a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 3
+  currentHealth: 0
+  deathDelay: 0
 --- !u!1 &1150014482
 GameObject:
   m_ObjectHideFlags: 0
@@ -2144,6 +2160,8 @@ GameObject:
   - component: {fileID: 1290775869}
   - component: {fileID: 1290775872}
   - component: {fileID: 1290775873}
+  - component: {fileID: 1290775874}
+  - component: {fileID: 1290775875}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -2278,6 +2296,40 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1290775874
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1290775868}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93b22c388b2b74c948cb5007910d3a17, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 10
+  currentHealth: 0
+  deathDelay: 0.5
+--- !u!114 &1290775875
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1290775868}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41d377ec729624dbb9f37118580a975d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startDelay: 0
+  attackPos: {fileID: 0}
+  whatIsEnemies:
+    serializedVersion: 2
+    m_Bits: 0
+  attackRange: 0
+  damage: 0
 --- !u!1 &1609240596
 GameObject:
   m_ObjectHideFlags: 0
@@ -2490,7 +2542,7 @@ GameObject:
   - component: {fileID: 1625217618}
   - component: {fileID: 1625217619}
   - component: {fileID: 1625217620}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Goblin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2917,7 +2969,7 @@ GameObject:
   - component: {fileID: 1638042015}
   - component: {fileID: 1638042016}
   - component: {fileID: 1638042017}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Goblin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3425,7 +3477,7 @@ GameObject:
   - component: {fileID: 2029960606}
   - component: {fileID: 2029960607}
   - component: {fileID: 2029960608}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Goblin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3997,6 +4049,22 @@ PrefabInstance:
     - target: {fileID: 8820904645799395632, guid: fb07680f029004c39b7444883103e6d1, type: 3}
       propertyPath: speed
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8820904645799395632, guid: fb07680f029004c39b7444883103e6d1, type: 3}
+      propertyPath: damage
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8820904645799395633, guid: fb07680f029004c39b7444883103e6d1, type: 3}
+      propertyPath: m_Color.b
+      value: 0.17515129
+      objectReference: {fileID: 0}
+    - target: {fileID: 8820904645799395633, guid: fb07680f029004c39b7444883103e6d1, type: 3}
+      propertyPath: m_Color.g
+      value: 0.9056604
+      objectReference: {fileID: 0}
+    - target: {fileID: 8820904645799395633, guid: fb07680f029004c39b7444883103e6d1, type: 3}
+      propertyPath: m_Color.r
+      value: 0.68020076
       objectReference: {fileID: 0}
     - target: {fileID: 8820904645799395635, guid: fb07680f029004c39b7444883103e6d1, type: 3}
       propertyPath: m_Name
