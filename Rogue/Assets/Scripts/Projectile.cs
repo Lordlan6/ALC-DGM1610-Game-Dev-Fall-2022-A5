@@ -8,7 +8,7 @@ public class Projectile : MonoBehaviour
     public float speed;
     private Transform player;
     private Vector2 target;
-    public int damage;
+    public int damage = 2;
 
     private Health playerHealth;
 
@@ -40,6 +40,10 @@ public class Projectile : MonoBehaviour
             DestroyProjectile();
         }
         if(other.CompareTag("Wall"))
+        {
+            DestroyProjectile();
+        }
+        if(other.CompareTag("Door"))
         {
             DestroyProjectile();
         }
